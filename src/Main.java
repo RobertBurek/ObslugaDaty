@@ -10,6 +10,28 @@ public class Main {
         List<Person> family = new ArrayList<>();
         Scanner scanner = new Scanner(System.in);
 
+        LocalDate nowDate = LocalDate.now();
+        LocalDate ofDate = LocalDate.of(2019, 06, 16);
+        LocalDate perseDate = LocalDate.parse("2019-02-13");
+        System.out.println("now(): " + nowDate);
+        System.out.println("of(...): " + ofDate);
+        System.out.println("parse(...)" + perseDate);
+
+        System.out.println(nowDate.hashCode());
+        nowDate = nowDate.plusDays(16);
+        System.out.println(" po modyfikacji: " + nowDate);
+        System.out.println(nowDate.hashCode());
+
+        LocalDate data1 = nowDate.plusDays(16);
+        LocalDate data2 = nowDate.minusDays(15);
+        LocalDate data3 = nowDate.minusMonths(13);
+        LocalDate data4 = nowDate.plusMonths(13);
+        System.out.println("Data1 :" + data1);
+        System.out.println("Data2 :" + data2);
+        System.out.println("Data3 :" + data3);
+        System.out.println("Data4 :" + data4);
+
+
         do {
             if (!family.isEmpty()) {
                 System.out.println("-------------OSOBY NA LISCIE-------------");
